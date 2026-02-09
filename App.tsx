@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [view, setView] = useState<ViewState>('dashboard'); 
-  const [view, setView] = useState<ViewState>('profile');
+  
 
   
   const [settings, setSettings] = useState<UserSettings>({
