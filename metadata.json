@@ -1,0 +1,7 @@
+{
+  "name": "PennyWise AI",
+  "description": "Smart expense tracking with AI receipt scanning for students and freelancers.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
