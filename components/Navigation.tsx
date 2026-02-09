@@ -1,5 +1,6 @@
 import React from 'react';
-import { Home, PlusCircle, Target, BookOpen } from 'lucide-react';
+import { Home, PlusCircle, Target, BookOpen, User } from 'lucide-react';
+
 import { ViewState, Language } from '../types';
 import { translations } from '../utils/translations';
 
@@ -20,6 +21,25 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView, la
 
   return (
     <>
+
+    {/* Mobile Top Header */}
+<div className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 px-4 py-3 md:hidden z-20 flex justify-between items-center">
+  <h1 className="text-lg font-bold text-indigo-800">
+    PennyWise AI
+  </h1>
+
+  <button
+    onClick={() => setView('profile')}
+    className="p-2 rounded-full hover:bg-gray-100 active:bg-gray-200"
+    aria-label="Account Profile"
+  >
+    <User size={22} className="text-gray-700" />
+  </button>
+</div>
+
+
+
+
       {/* Floating Action Button for Add Expense - Always Visible */}
       <div className="fixed bottom-24 right-4 z-20 md:hidden">
         <button

@@ -18,6 +18,8 @@ const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [view, setView] = useState<ViewState>('dashboard'); 
+  const [view, setView] = useState<ViewState>('profile');
+
   
   const [settings, setSettings] = useState<UserSettings>({
       isOnboarded: false,
@@ -173,7 +175,7 @@ const App: React.FC = () => {
 
   // 4. Tab Views (With Navigation)
   return (
-    <div className="min-h-screen bg-white md:bg-gray-50 font-sans text-gray-900">
+    <div className="pt-14 md:pt-0">
       
       {view === 'dashboard' && (
         <Dashboard 
